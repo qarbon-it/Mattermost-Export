@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "inputs": [
+        {
+            "id": "authToken",
+            "description": "Enter authentication token",
+            "type": "promptString",
+            "password": true
+        },
+        {
+            "id": "teamName",
+            "description": "Enter team name",
+            "type": "promptString"
+        },
+        {
+            "id": "channelName",
+            "description": "Enter channel name",
+            "type": "promptString"
+        }
+    ],
+    "configurations": [
+        {
+            "name": "Python Debugger: Export channel HTML",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "MMExport2HTML.py",
+            "console": "integratedTerminal",
+            "args": [
+                "-a", 
+                "${input:authToken}",
+                "-u",
+                "marian_dub",
+                "-t",
+                "${input:teamName}",
+                "-c",
+                "${input:channelName}",
+                "-s",
+                "chat.qarbon.host",
+                "--reactions",
+                "--dark-mode",
+                "--verbose"
+            ]
+        }
+    ]
+}
