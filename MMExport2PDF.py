@@ -146,7 +146,7 @@ def processOptions():
 
         filtergroup = parser.add_argument_group(title='Message Filters')
         filtergroup.add_argument("-c", "--channel", help="Export only a single channel (by channel name or display name)", action="store", dest="channel", default=None)
-        filtergroup.add_argument("-I", "--include", help="Only inlcude these channels in the export.", nargs='*', dest="include", default=[])
+        filtergroup.add_argument("-I", "--include", help="Only include these channels in the export.", nargs='*', dest="include", default=[])
         filtergroup.add_argument("-E", "--exclude", help="Exclude these channels from the export", nargs='*', dest="exclude", default=[])
         filtergroup.add_argument("--start-date", help="Start date for message export (YYYY-MM-DD format). If not specified, exports from beginning.", action="store", dest="start_date", default=None)
         filtergroup.add_argument("--end-date", help="End date for message export (YYYY-MM-DD format). If not specified, exports to present.", action="store", dest="end_date", default=None)
